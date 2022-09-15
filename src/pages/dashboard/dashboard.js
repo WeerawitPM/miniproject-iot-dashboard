@@ -1,5 +1,5 @@
+import Example from "../chart/lineChart";
 import "./dashboard.css";
-import { myChart } from "./myChart";
 
 const Dashboard = () => {
 
@@ -24,7 +24,7 @@ const Dashboard = () => {
                         </div>
 
                         <div class="my-4 w-100" width="900" height="380">
-                            {myChart()}
+                            <Example />
                         </div>
 
                         <h2>Section title</h2>
