@@ -55,7 +55,7 @@ const data = [
     }
 ];
 
-export default function Example() {
+export default function RealtimeChart() {
     const [opacity, setOpacity] = useState({
         uv: 1,
         pv: 1

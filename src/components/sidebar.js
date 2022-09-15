@@ -22,10 +22,10 @@ const Sidebar = () => {
                                     </button>
                                     <div class="collapse" id="dashboard-collapse">
                                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
-                                            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Weekly</a></li>
-                                            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Monthly</a></li>
-                                            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Annually</a></li>
+                                            <li><Link class="link-dark d-inline-flex text-decoration-none rounded" to="Realtime">Overview</Link></li>
+                                            <li><Link class="link-dark d-inline-flex text-decoration-none rounded" to="Weekly">Weekly</Link></li>
+                                            <li><a class="link-dark d-inline-flex text-decoration-none rounded">Monthly</a></li>
+                                            <li><a class="link-dark d-inline-flex text-decoration-none rounded">Annually</a></li>
                                         </ul>
                                     </div>
                                 </li>
