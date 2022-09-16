@@ -7,12 +7,12 @@ const useFetch = () => {
 
   async function fetchData() {
     try {
-      const headers = {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-      };
-      const url = "https://jsonplaceholder.typicode.com/todos";
-      const res = await axios.get(url, { headers });
+      // const headers = {
+      //   "Content-Type": "application/json",
+      //   "Access-Control-Allow-Origin": "*",
+      // };
+      const url = "https://backend-embedded.herokuapp.com/";
+      const res = await axios.get(url);
       setData(res.data);
     } catch (err) {
       setErrors(err);
@@ -28,11 +28,12 @@ const useFetch = () => {
       {data && data.map((item, index) => {
         return (
           <div key={index}>
-            <span>{item.title}</span>
+            <span>{item.Date}</span>
           </div>
         )
       })}
     </span>
+
     // <div>Has error: {JSON.stringify(hasError)}
     //   <br />
     //   <span>{JSON.stringify(data)}</span>
