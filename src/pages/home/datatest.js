@@ -11,7 +11,7 @@ const useFetch = () => {
       //   "Content-Type": "application/json",
       //   "Access-Control-Allow-Origin": "*",
       // };
-      const url = "https://backend-embedded.herokuapp.com/";
+      const url = "https://backend-embedded.herokuapp.com";
       const res = await axios.get(url);
       setData(res.data);
     } catch (err) {
@@ -21,23 +21,24 @@ const useFetch = () => {
 
   useEffect(() => {
     fetchData();
+    console.log(data);
   }, [])
 
   return (
-    <span>
-      {data && data.map((item, index) => {
-        return (
-          <div key={index}>
-            <span>{item.Date}</span>
-          </div>
-        )
-      })}
-    </span>
+    // <span>
+    //   {data && data.map((item, index) => {
+    //     return (
+    //       <div key={index}>
+    //         <span>{item.Date}</span>
+    //       </div>
+    //     )
+    //   })}
+    // </span>
 
-    // <div>Has error: {JSON.stringify(hasError)}
-    //   <br />
-    //   <span>{JSON.stringify(data)}</span>
-    // </div>
+    <div>Has error: {JSON.stringify(hasError)}
+      <br />
+      <span>{JSON.stringify(data)}</span>
+    </div>
   );
 };
 export default useFetch;

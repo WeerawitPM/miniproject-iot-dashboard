@@ -6,6 +6,10 @@ const Sidebar = () => {
         <body>
             <main class="d-flex flex-nowrap">
                 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                    <div class="center">
+                        <img src="https://media.discordapp.net/attachments/1003000600776151141/1032690259743485993/unknown.png"></img>
+                        ESWeather
+                    </div>
                     <div class="position-sticky pt-3 sidebar-sticky flex-shrink-0 p-3">
                         <ul class="nav flex-column">
                             <li class="nav-item">
@@ -18,10 +22,10 @@ const Sidebar = () => {
                                     </button>
                                     <div class="collapse" id="dashboard-collapse">
                                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                            <li><Link class="link-dark d-inline-flex text-decoration-none rounded" to="Realtime">Overview</Link></li>
-                                            <li><Link class="link-dark d-inline-flex text-decoration-none rounded" to="Weekly">Weekly</Link></li>
-                                            <li><a class="link-dark d-inline-flex text-decoration-none rounded">Monthly</a></li>
-                                            <li><a class="link-dark d-inline-flex text-decoration-none rounded">Annually</a></li>
+                                            <li><Link class="white d-inline-flex text-decoration-none rounded" to="Realtime">Realtime</Link></li>
+                                            <li><Link class="white d-inline-flex text-decoration-none rounded" to="Weekly">Weekly</Link></li>
+                                            <li><a class="white d-inline-flex text-decoration-none rounded">Monthly</a></li>
+                                            <li><a class="white d-inline-flex text-decoration-none rounded">Annually</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -31,16 +35,16 @@ const Sidebar = () => {
                                     </button>
                                     <div class="collapse" id="dashboard-collapse">
                                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Day</a></li>
-                                            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Weekly</a></li>
-                                            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Monthly</a></li>
-                                            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Annually</a></li>
+                                            <li><a href="#" class="white d-inline-flex text-decoration-none rounded">Day</a></li>
+                                            <li><a href="#" class="white d-inline-flex text-decoration-none rounded">Weekly</a></li>
+                                            <li><a href="#" class="white d-inline-flex text-decoration-none rounded">Monthly</a></li>
+                                            <li><a href="#" class="white d-inline-flex text-decoration-none rounded">Annually</a></li>
                                         </ul>
                                     </div>
                                 </li>
                             </ul>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><span data-feather="layers" class="align-text-bottom"></span>Register</a>
+                                <a class="nav-link" href="#"><span data-feather="layers" class="align-text-bottom"></span>Devices</a>
                             </li>
                         </ul>
                     </div>
