@@ -1,4 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './sidebar.css';
 
 const Sidebar = () => {
@@ -30,10 +32,10 @@ const Sidebar = () => {
                                     </div>
                                 </li>
                                 <li class="mb-1">
-                                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#report-collapse" aria-expanded="false">
                                         Report
                                     </button>
-                                    <div class="collapse" id="dashboard-collapse">
+                                    <div class="collapse" id="report-collapse">
                                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                             <li><a href="#" class="white d-inline-flex text-decoration-none rounded">Day</a></li>
                                             <li><a href="#" class="white d-inline-flex text-decoration-none rounded">Weekly</a></li>
