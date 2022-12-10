@@ -1,8 +1,14 @@
 import "./home.css";
 import useFetch from "./datatest";
+import GaugeChart from 'react-gauge-chart'
 
 const Home = () => {
     // const [data] = useFetch("https://backend-embedded.herokuapp.com/");
+    const chartStyle = {
+        height: 100,
+        width: 250,
+        textColor: '#000000',
+    };
 
     return (
         <body>
@@ -24,7 +30,7 @@ const Home = () => {
                         </div>
 
                         <div class="my-4 w-100" width="900" height="380">
-                            {useFetch()}
+                            <GaugeChart id="gauge-chart1" style={chartStyle} />
                         </div>
 
                     </main>

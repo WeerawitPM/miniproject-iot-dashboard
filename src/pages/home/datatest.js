@@ -11,7 +11,7 @@ const useFetch = () => {
       //   "Content-Type": "application/json",
       //   "Access-Control-Allow-Origin": "*",
       // };
-      const url = "https://backend-embedded.herokuapp.com/boarddata/001";
+      const url = "http://localhost:5000/";
       const res = await axios.get(url);
       setData(res.data);
     } catch (err) {

@@ -11,55 +11,55 @@ import {
 } from "recharts";
 import axios from "axios";
 
-const data = [
-    {
-        Day: "Monday",
-        Temperature_C: 25,
-        Humadity: 80,
-    },
-    {
-        Day: "Tuesday",
-        Temperature_C: 26,
-        Humadity: 85,
-    },
-    {
-        Day: "Wednesday",
-        Temperature_C: 27,
-        Humadity: 75,
-    },
-    {
-        Day: "Thursday",
-        Temperature_C: 28,
-        Humadity: 81,
-    },
-    {
-        Day: "Friday",
-        Temperature_C: 29,
-        Humadity: 82,
-    }
-];
+// const data = [
+//     {
+//         Day: "Monday",
+//         Temperature_C: 25,
+//         Humadity: 80,
+//     },
+//     {
+//         Day: "Tuesday",
+//         Temperature_C: 26,
+//         Humadity: 85,
+//     },
+//     {
+//         Day: "Wednesday",
+//         Temperature_C: 27,
+//         Humadity: 75,
+//     },
+//     {
+//         Day: "Thursday",
+//         Temperature_C: 28,
+//         Humadity: 81,
+//     },
+//     {
+//         Day: "Friday",
+//         Temperature_C: 29,
+//         Humadity: 82,
+//     }
+// ];
 
 export default function RealtimeChart() {
-    // const [hasError, setErrors] = useState(false);
-    // const [data, setData] = useState(null);
+    const [hasError, setErrors] = useState(false);
+    const [data, setData] = useState(null);
 
-    // async function fetchData() {
-    //     try {
-    //         // const headers = {
-    //         //   "Content-Type": "application/json",
-    //         //   "Access-Control-Allow-Origin": "*",
-    //         // };
-    //         const url = "https://backend-embedded.herokuapp.com/boarddata/001";
-    //         const res = await axios.get(url);
-    //         setData(res.data);
-    //     } catch (err) {
-    //         setErrors(err);
-    //     }
-    // }
+    async function fetchData() {
+        try {
+            // const headers = {
+            //   "Content-Type": "application/json",
+            //   "Access-Control-Allow-Origin": "*",
+            // };
+            const url = "http://localhost:5000/latest";
+            const res = await axios.get(url);
+            setData(res.data);
+        } catch (err) {
+            setErrors(err);
+        }
+    }
 
-    // useEffect(() => {
-    //     fetchData();
-    // }, [])
+    useEffect(() => {
+        fetchData();
+    }, [])
 
     const [opacity, setOpacity] = useState({
         Temperature_C: 1,
@@ -95,7 +95,7 @@ export default function RealtimeChart() {
                     }}
                 >
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="Day" />
+                    <XAxis dataKey="AllDateTime" />
                     <YAxis />
                     <Tooltip />
                     <Legend
