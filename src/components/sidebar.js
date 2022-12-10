@@ -37,7 +37,7 @@ const Sidebar = () => {
                                     </button>
                                     <div class="collapse" id="report-collapse">
                                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                            <li><a href="#" class="white d-inline-flex text-decoration-none rounded">Day</a></li>
+                                            <li><Link class="white d-inline-flex text-decoration-none rounded" to="ReportDay">Day</Link></li>
                                             <li><a href="#" class="white d-inline-flex text-decoration-none rounded">Weekly</a></li>
                                             <li><a href="#" class="white d-inline-flex text-decoration-none rounded">Monthly</a></li>
                                             <li><a href="#" class="white d-inline-flex text-decoration-none rounded">Annually</a></li>
