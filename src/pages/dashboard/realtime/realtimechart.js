@@ -43,6 +43,10 @@ export default function RealtimeChart() {
     const [hasError, setErrors] = useState(false);
     const [data, setData] = useState(null);
 
+    setInterval(() => {
+        fetchData();
+    }, 60000);
+
     async function fetchData() {
         try {
             // const headers = {
@@ -96,7 +100,7 @@ export default function RealtimeChart() {
                 >
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="AllDateTime" />
-                    <YAxis />
+                    <YAxis type="number" domain={[0, 100]}/>
                     <Tooltip />
                     <Legend
                         onMouseEnter={handleMouseEnter}

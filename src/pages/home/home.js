@@ -1,9 +1,17 @@
 import "./home.css";
 import Chart from "./Chart";
+import moment from "moment/moment";
+import "moment/locale/th";
 
 const Home = () => {
     // const [data] = useFetch("https://backend-embedded.herokuapp.com/");
 
+    setInterval(() => {
+        document.getElementById("Time").innerHTML = moment().format("LTS");
+    }, 1000);
+    setInterval(() => {
+        document.getElementById("Date").innerHTML = moment().format("dddd, DD MMMM YYYY");
+    });
     return (
         <body>
             <div class="container-fluid">
@@ -23,6 +31,20 @@ const Home = () => {
                             </div>
                         </div>
 
+                        <div class="row">
+                            <div class="col gauge-center">
+                                <div class="dateTime">
+                                    <p id="Time" class="p-time"></p>
+                                    <p id="Date"></p>
+                                </div>
+                            </div>
+                            <div class="col gauge-center">
+                                <div class="dateTime">
+                                    <p>asdasd</p>
+                                    <p>sadasd</p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col gauge-center">
                                 <Chart height={'200px'} width={'300px'} chartId={'630f67ac-abe7-4912-8db3-db35526cbdbd'} maxDataAge={10} background={'tranparent'} />

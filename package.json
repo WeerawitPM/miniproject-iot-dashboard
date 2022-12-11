@@ -9,11 +9,14 @@
     "@testing-library/user-event": "^13.2.1",
     "axios": "^0.27.2",
     "bootstrap": "5.2.2",
+    "crypto-browserify": "^3.12.0",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "recharts": "^2.1.14",
+    "stream": "^0.0.2",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
@@ -39,5 +42,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-router": "^6.3.0"
+  },
+  "browser": {
+    "crypto": false
   }
 }
