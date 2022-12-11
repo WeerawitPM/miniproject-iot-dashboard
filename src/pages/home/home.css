@@ -31,19 +31,25 @@ body {
 
 .gauge-center {
   display: flex;
-  width: 60%;
   justify-content: center;
 }
 
 .dateTime {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100%;
   font-size: 1.5rem;
   font-weight: 500;
   text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 6px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 10px;
+  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.2), 0 1px 6px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
   padding: 1rem;
+  margin: 10px;
 }
 
 .p-time {
-  font-size: 3.5rem;
+  font-size: 5.5rem;
 }

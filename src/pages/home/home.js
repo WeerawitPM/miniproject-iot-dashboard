@@ -2,9 +2,9 @@ import "./home.css";
 import Chart from "./Chart";
 import moment from "moment/moment";
 import "moment/locale/th";
+import Weather from "./Weather";
 
 const Home = () => {
-    // const [data] = useFetch("https://backend-embedded.herokuapp.com/");
 
     setInterval(() => {
         document.getElementById("Time").innerHTML = moment().format("LTS");
@@ -12,6 +12,7 @@ const Home = () => {
     setInterval(() => {
         document.getElementById("Date").innerHTML = moment().format("dddd, DD MMMM YYYY");
     });
+
     return (
         <body>
             <div class="container-fluid">
@@ -30,7 +31,6 @@ const Home = () => {
                                 </button>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col gauge-center">
                                 <div class="dateTime">
@@ -39,18 +39,20 @@ const Home = () => {
                                 </div>
                             </div>
                             <div class="col gauge-center">
-                                <div class="dateTime">
-                                    <p>asdasd</p>
-                                    <p>sadasd</p>
-                                </div>
+                                <Weather />
                             </div>
                         </div>
+                        <br></br>
                         <div class="row">
                             <div class="col gauge-center">
-                                <Chart height={'200px'} width={'300px'} chartId={'630f67ac-abe7-4912-8db3-db35526cbdbd'} maxDataAge={10} background={'tranparent'} />
+                                <div class="dateTime">
+                                    <Chart height={'200px'} width={'300px'} chartId={'630f67ac-abe7-4912-8db3-db35526cbdbd'} maxDataAge={10} background={'tranparent'} />
+                                </div>
                             </div>
                             <div class="col gauge-center">
-                                <Chart height={'200px'} width={'300px'} chartId={'630f695c-f920-41db-80e3-da5cb6cf5bab'} maxDataAge={10} background={'tranparent'} />
+                                <div class="dateTime">
+                                    <Chart height={'200px'} width={'300px'} chartId={'630f695c-f920-41db-80e3-da5cb6cf5bab'} maxDataAge={10} background={'tranparent'} />
+                                </div>
                             </div>
                         </div>
 

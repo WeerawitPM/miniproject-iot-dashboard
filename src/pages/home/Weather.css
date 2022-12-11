@@ -1,0 +1,41 @@
+.container-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.2), 0 1px 6px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+.weather-icon img {
+    width: 200px;
+    height: 200px;
+}
+
+.p-weather1{
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin: auto;
+}
+
+.p-weather {
+    font-size: 2.0rem;
+    font-weight: 600;
+    text-align: center;
+    margin: auto;
+}
+
+.weather-center {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.weather-bottom {
+    padding-bottom: 10px;
+}
