@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import {
-    AreaChart,
-    Area,
+    LineChart,
+    Line,
     XAxis,
     YAxis,
     CartesianGrid,
@@ -87,9 +87,9 @@ export default function RealtimeChart() {
         [opacity, setOpacity]
     );
     return (
-        <div style={{ width: "100%", height: 380 }}>
+        <div style={{ width: "100%", height: 550 }}>
             <ResponsiveContainer>
-                <AreaChart
+                <LineChart
                     data={data}
                     margin={{
                         top: 10,
@@ -99,30 +99,32 @@ export default function RealtimeChart() {
                     }}
                 >
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="AllDateTime" />
+                    <XAxis dataKey="AllDateTime" interval={5} angle={-45} textAnchor="end" height={150}/>
                     <YAxis type="number" domain={[0, 100]}/>
                     <Tooltip />
                     <Legend
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     />
-                    <Area type="monotone"
+                    <Line type="monotone"
                         dataKey="Humadity"
                         stroke="#8884d8"
+                        strokeWidth={5}
                         strokeOpacity={opacity.Temperature_C}
                         fill="#8884d8"
                         opacity={opacity.Temperature_C}
                     />
-                    <Area
+                    <Line
                         type="monotone"
                         dataKey="Temperature_C"
                         stackId="1"
                         stroke="#ffc658"
+                        strokeWidth={5}
                         strokeOpacity={opacity.Humadity}
                         fill="#ffc658"
                         opacity={opacity.Humadity}
                     />
-                </AreaChart>
+                </LineChart>
             </ResponsiveContainer>
         </div>
     );
