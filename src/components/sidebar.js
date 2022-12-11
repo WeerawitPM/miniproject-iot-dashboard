@@ -26,8 +26,8 @@ const Sidebar = () => {
                                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                             <li><Link class="white d-inline-flex text-decoration-none rounded" to="Realtime">Realtime</Link></li>
                                             <li><Link class="white d-inline-flex text-decoration-none rounded" to="Weekly">Weekly</Link></li>
-                                            <li><a class="white d-inline-flex text-decoration-none rounded">Monthly</a></li>
-                                            <li><a class="white d-inline-flex text-decoration-none rounded">Annually</a></li>
+                                            <li><Link class="white d-inline-flex text-decoration-none rounded" to="Monthly">Monthly</Link></li>
+                                            <li><Link class="white d-inline-flex text-decoration-none rounded" to="Yearly">Annually</Link></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -38,9 +38,6 @@ const Sidebar = () => {
                                     <div class="collapse" id="report-collapse">
                                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                             <li><Link class="white d-inline-flex text-decoration-none rounded" to="ReportDay">Day</Link></li>
-                                            <li><a href="#" class="white d-inline-flex text-decoration-none rounded">Weekly</a></li>
-                                            <li><a href="#" class="white d-inline-flex text-decoration-none rounded">Monthly</a></li>
-                                            <li><a href="#" class="white d-inline-flex text-decoration-none rounded">Annually</a></li>
                                         </ul>
                                     </div>
                                 </li>

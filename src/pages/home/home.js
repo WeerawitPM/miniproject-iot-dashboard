@@ -46,12 +46,12 @@ const Home = () => {
                         <div class="row">
                             <div class="col gauge-center">
                                 <div class="dateTime">
-                                    <Chart height={'200px'} width={'300px'} chartId={'630f67ac-abe7-4912-8db3-db35526cbdbd'} maxDataAge={10} background={'tranparent'} />
+                                    <Chart height={'250px'} width={'400px'} chartId={'630f67ac-abe7-4912-8db3-db35526cbdbd'} maxDataAge={10} background={'tranparent'} />
                                 </div>
                             </div>
                             <div class="col gauge-center">
                                 <div class="dateTime">
-                                    <Chart height={'200px'} width={'300px'} chartId={'630f695c-f920-41db-80e3-da5cb6cf5bab'} maxDataAge={10} background={'tranparent'} />
+                                    <Chart height={'250px'} width={'400px'} chartId={'630f695c-f920-41db-80e3-da5cb6cf5bab'} maxDataAge={10} background={'tranparent'} />
                                 </div>
                             </div>
                         </div>

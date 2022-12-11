@@ -11,35 +11,7 @@ import {
 } from "recharts";
 import axios from "axios";
 
-// const data = [
-//     {
-//         Day: "Monday",
-//         Temperature_C: 25,
-//         Humadity: 80,
-//     },
-//     {
-//         Day: "Tuesday",
-//         Temperature_C: 26,
-//         Humadity: 85,
-//     },
-//     {
-//         Day: "Wednesday",
-//         Temperature_C: 27,
-//         Humadity: 75,
-//     },
-//     {
-//         Day: "Thursday",
-//         Temperature_C: 28,
-//         Humadity: 81,
-//     },
-//     {
-//         Day: "Friday",
-//         Temperature_C: 29,
-//         Humadity: 82,
-//     }
-// ];
-
-export default function WeeklyChart() {
+export default function MonthlyChart() {
     const [hasError, setErrors] = useState(false);
     const [data, setData] = useState(null);
 
@@ -49,7 +21,7 @@ export default function WeeklyChart() {
             //   "Content-Type": "application/json",
             //   "Access-Control-Allow-Origin": "*",
             // };
-            const url = "http://192.168.43.3:5000/week";
+            const url = "http://192.168.43.3:5000/month";
             const res = await axios.get(url);
             setData(res.data);
         } catch (err) {
